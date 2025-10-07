@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeFit</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">CoffeeFit</span>
+                </div>
+
+                <nav class="nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#menu">Menú</a>
+                    <a href="#sobre-nosotros">Sobre Nosotros</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button id="theme-toggle" class="btn-icon" aria-label="Cambiar tema">
+                        <svg id="theme-icon-moon" class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="theme-icon-sun" class="icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+
+                    <button id="login-btn" class="btn-primary">
+                        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                            <polyline points="10 17 15 12 10 7"></polyline>
+                            <line x1="15" y1="12" x2="3" y2="12"></line>
+                        </svg>
+                        <span>Iniciar Sesión</span>
+                    </button>
+
+                    <div id="user-menu" class="user-menu hidden">
+                        <button id="user-menu-btn" class="user-menu-btn">
+                            <div class="user-avatar">
+                                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <span id="user-name" class="user-name"></span>
+                            <svg class="icon chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+
+                        <div id="user-dropdown" class="user-dropdown hidden">
+                            <div class="user-dropdown-header">
+                                <p id="user-email" class="user-email"></p>
+                            </div>
+                            <button class="dropdown-item">
+                                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <span>Mi Perfil</span>
+                            </button>
+                            <button class="dropdown-item">
+                                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H5m13.2 5.2l-4.2-4.2m0-6l4.2-4.2"></path>
+                                </svg>
+                                <span>Configuración</span>
+                            </button>
+                            <div class="dropdown-divider"></div>
+                            <button id="logout-btn" class="dropdown-item text-danger">
+                                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                                <span>Cerrar Sesión</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">
+                        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                            <path d="M7 2v20"></path>
+                            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+                        </svg>
+                        <span>Auténtica Cocina Saludable</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Sabores que <span class="text-accent">Cuentan Historias</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Descubre una experiencia gastronómica única donde cada plato es preparado con ingredientes frescos y recetas saludables.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Ver Menú</button>
+                        <button class="btn-secondary">Reservar Mesa</button>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plato de comida deliciosa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+                <p class="section-description">
+                    Nos dedicamos a ofrecer una experiencia gastronómica inolvidable con atención al detalle en cada aspecto.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"></path>
+                            <line x1="6" y1="17" x2="18" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Chef Profesional</h3>
+                    <p class="feature-description">Nuestro chef cuenta con más de 20 años de experiencia en alta cocina.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Ingredientes Frescos</h3>
+                    <p class="feature-description">Trabajamos con productores locales para garantizar la máxima calidad.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Servicio Rápido</h3>
+                    <p class="feature-description">Atención eficiente sin comprometer la calidad de nuestros platos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Saludable</h3>
+                    <p class="feature-description">Reconocidos por nuestra excelencia culinaria y servicio excepcional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Menú</h2>
+                <p class="section-description">
+                    Descubre nuestras especialidades preparadas con pasión y los mejores ingredientes.
+                </p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-card-image">
+                        <img src="https://images.pexels.com/photos/16743486/pexels-photo-16743486.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Paella Valenciana">
+                        <div class="menu-card-price">€18.50</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Paella Valenciana</h3>
+                        <p class="menu-card-description">Arroz con mariscos frescos, pollo y azafrán</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card-image">
+                        <img src="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Solomillo al Vino Tinto">
+                        <div class="menu-card-price">€24.90</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Solomillo al Vino Tinto</h3>
+                        <p class="menu-card-description">Jugoso solomillo con salsa de vino y guarnición</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card-image">
+                        <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Risotto de Setas">
+                        <div class="menu-card-price">€16.00</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Risotto de Setas</h3>
+                        <p class="menu-card-description">Cremoso risotto con setas de temporada y parmesano</p>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card-image">
+                        <img src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tarta de Chocolate">
+                        <div class="menu-card-price">€7.50</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Tarta de Chocolate</h3>
+                        <p class="menu-card-description">Deliciosa tarta con corazón fundente y helado</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-cta">
+                <button class="btn-primary">Ver Menú Completo</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h2 id="modal-title" class="modal-title">Bienvenido de nuevo</h2>
+                <p id="modal-subtitle" class="modal-subtitle">Inicia sesión para continuar</p>
+            </div>
+
+            <form id="auth-form" class="auth-form">
+                <div id="fullname-group" class="form-group hidden">
+                    <label class="form-label">Nombre completo</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input type="text" id="fullname" class="form-input" placeholder="Juan Pérez">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Correo electrónico</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <input type="email" id="email" class="form-input" placeholder="tu@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Contraseña</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input type="password" id="password" class="form-input" placeholder="***********" required minlength="6">
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message hidden"></div>
+
+                <button type="submit" id="submit-btn" class="btn-primary btn-full">
+                    Iniciar Sesión
+                </button>
+            </form>
+
+            <div class="modal-footer">
+                <button id="toggle-form" class="toggle-link">
+                    ¿No tienes cuenta? Regístrate
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
