@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #ea580c;
+    --color-primary-dark: #c2410c;
+    --color-accent: #ea580c;
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f9fafb;
+    --color-bg-tertiary: #f3f4f6;
+    --color-text: #111827;
+    --color-text-secondary: #6b7280;
+    --color-border: #e5e7eb;
+    --color-danger: #dc2626;
+}
+
+[data-theme="dark"] {
+    --color-bg: #111827;
+    --color-bg-secondary: #1f2937;
+    --color-bg-tertiary: #374151;
+    --color-text: #ffffff;
+    --color-text-secondary: #d1d5db;
+    --color-border: #374151;
+}

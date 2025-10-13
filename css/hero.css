@@ -1,0 +1,85 @@
+.hero {
+    padding: 7rem 1rem 4rem;
+    background: linear-gradient(to bottom right, #fff7ed, #fef2f2);
+    transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(to bottom right, #111827, #1f2937);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ffedd5;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    width: fit-content;
+}
+
+[data-theme="dark"] .badge {
+    background-color: rgba(234, 88, 12, 0.2);
+}
+
+.badge span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-buttons .btn-primary {
+    padding: 1rem 2rem;
+    box-shadow: 0 10px 15px -3px rgba(234, 88, 12, 0.3);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
