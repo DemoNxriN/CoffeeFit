@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="./css/modal.css">
         <link rel="stylesheet" href="./css/forms.css">
         <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="stylesheet" href="./css/contactos.css">
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     </head>
     <body>
@@ -114,6 +115,62 @@
                     </p>
                     <div class="producte-image">
                         <img src="https://images.pexels.com/photos/16743486/pexels-photo-16743486.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Plato de comida deliciosa">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacto" class="hero">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Contáctanos</h2>
+                    <p>Rellena el formulario o utiliza nuestra información de contacto</p>
+                </header>
+
+                <div class="contact-info">
+                    
+                    <div class="section-header">
+                        <h3 class="section-subtitle">Envíanos tu mensaje</h3>
+                    </div>
+
+                    <form action="#" method="POST" class="hero-buttons">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+                        </div>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+
+                    
+                    <div class="contact-details">
+                        <h3 class="section-subtitle">Información de contacto</h3>
+                        <ul>
+                            <li><strong>Correo:</strong> contacto@ejemplo.com</li>
+                            <li><strong>Teléfono:</strong> +34 123 456 789</li>
+                            <li><strong>Dirección:</strong> Calle Ejemplo, 123, Ciudad</li>
+                        </ul>
                     </div>
                 </div>
             </div>
