@@ -1,0 +1,10 @@
+.producte {
+    padding: 7rem 1rem 4rem;
+    background: linear-gradient(to bottom right, #fff7ed, #fef2f2);
+    transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .producte {
+    background: linear-gradient(to bottom right, #111827, #1f2937);
+}
+
