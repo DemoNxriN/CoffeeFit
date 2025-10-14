@@ -8,3 +8,57 @@
     background: linear-gradient(to bottom right, #111827, #1f2937);
 }
 
+.form-compra {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* centrar el formulari */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-compra form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-compra input, .form-compra textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-compra button {
+    padding: 0.7rem;
+    background-color: var(--color-primary);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.form-compra button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Mode fosc */
+[data-theme="dark"] #compra_menu > .form-compra {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+[data-theme="dark"] .form-compra input,
+[data-theme="dark"] .form-compra textarea {
+    background-color: #374151;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+}
+
+[data-theme="dark"] .form-compra button {
+    background-color: var(--color-primary);
+    color: #1f2937;
+}
