@@ -1,32 +1,29 @@
-// translations.js
-export const languages = {
-  es: 'Español',
-  ca: 'Català'
-};
-
-export const defaultLang = 'es';
-
-export const translations = {
-  es: {
-    'nav.home': 'Inicio',
-    'nav.products': 'Productos',
-    'nav.about': 'Sobre Nosotros',
-    'nav.contact': 'Contacto',
-  },
-  ca: {
-    'nav.home': 'Inici',
-    'nav.products': 'Productes',
-    'nav.about': 'Sobre Nosaltres',
-    'nav.contact': 'Contacte',
+// Carga las traducciones desde un JSON
+export async function loadTranslations(lang) {
+  try {
+    const res = await fetch(`/i18n/${lang}.json`);
+    if (!res.ok) throw new Error(`No se pudo cargar ${lang}.json`);
+    return await res.json();
+  } catch (err) {
+    console.warn(`Error cargando ${lang}.json, usando español por defecto`, err);
+    const fallback = await fetch(`/i18n/es.json`);
+    return await fallback.json();
   }
-};
-
-export function getLangFromUrl() {
-  const path = window.location.pathname.split('/');
-  const lang = path[1];
-  return languages[lang] ? lang : defaultLang;
 }
 
-export function t(lang, key) {
-  return translations[lang][key] || translations[defaultLang][key] || key;
+// Aplica traducciones a elementos con data-i18n
+export function applyTranslations(translations) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n'); // ej: "nav.home"
+    const keys = key.split('.');
+    let text = translations;
+
+    for (const k of keys) {
+      if (text && typeof text === 'object') {
+        text = text[k];
+      }
+    }
+
+    if (typeof text === 'string') el.textContent = text;
+  });
 }

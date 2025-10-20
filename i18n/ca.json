@@ -1,0 +1,106 @@
+{
+  "title": "CoffeeFit",
+  "header": {
+    "logo": "CoffeeFit",
+    "login": "Inicia Sessió"
+  },
+  "nav": {
+    "home": "Inici",
+    "products": "Menú",
+    "about": "Sobre Nosaltres",
+    "contact": "Contacte"
+  },
+  "lang": {
+    "es": "Español",
+    "ca": "Català"
+  },
+  "hero": {
+    "badge": "Autèntica Cuina Saludable",
+    "title": "Sabors que",
+    "titleAccent": "Compten Històries",
+    "description": "Descobreix una experiència gastronòmica única on cada plat és preparat amb ingredients frescos i receptes saludables.",
+    "btnMenu": "Veure Menú",
+    "btnReserve": "Reservar Taula"
+  },
+  "features": {
+    "title": "Per Què Escollir-nos?",
+    "description": "Ens dediquem a oferir una experiència gastronòmica inoblidable amb atenció al detall en cada aspecte.",
+    "chef": {
+      "title": "Xef Professional",
+      "description": "El nostre xef compta amb més de 20 anys d'experiència en alta cuina."
+    },
+    "ingredients": {
+      "title": "Ingredients Frescos",
+      "description": "Treballem amb productors locals per garantir la màxima qualitat."
+    },
+    "speed": {
+      "title": "Servei Ràpid",
+      "description": "Atenció eficient sense comprometre la qualitat dels nostres plats."
+    },
+    "healthy": {
+      "title": "Saludable",
+      "description": "Reconeguts per la nostra excel·lència culinària i servei excepcional."
+    }
+  },
+  "menu": {
+    "title": "El Nostre Menú",
+    "description": "Descobreix les nostres especialitats preparades amb passió i els millors ingredients.",
+    "menu1": {
+      "title": "Paella Valenciana",
+      "description": "Arròs amb marisc fresc, pollastre i safrà"
+    },
+    "menu2": {
+      "title": "Filet de Vedella al Vi Negre",
+      "description": "Sucós filet amb salsa de vi i guarnició"
+    },
+    "menu3": {
+      "title": "Risotto de Bolets",
+      "description": "Cremós risotto amb bolets de temporada i parmesà"
+    },
+    "menu4": {
+      "title": "Pastís de Xocolata",
+      "description": "Deliciós pastís amb cor fundent i gelat"
+    }
+  },
+  "contact": {
+    "title": "Contacta'ns",
+    "subtitle": "Omple el formulari o utilitza la nostra informació de contacte",
+    "formTitle": "Envia'ns el teu missatge",
+    "form": {
+      "nameLabel": "Nom",
+      "namePlaceholder": "Nom",
+      "lastnameLabel": "Cognom",
+      "lastnamePlaceholder": "Cognom",
+      "emailLabel": "Correu electrònic",
+      "emailPlaceholder": "Correu electrònic",
+      "phoneLabel": "Telèfon",
+      "phonePlaceholder": "Telèfon",
+      "messageLabel": "Missatge",
+      "messagePlaceholder": "Missatge",
+      "submit": "Enviar"
+    },
+    "infoTitle": "Informació de contacte",
+    "info": {
+      "email": "Correu:",
+      "phone": "Telèfon:",
+      "address": "Adreça:"
+    }
+  },
+  "user": {
+    "profile": "El Meu Perfil",
+    "settings": "Configuració",
+    "logout": "Tanca Sessió"
+  },
+  "modal": {
+    "title": "Benvingut de nou",
+    "subtitle": "Inicia sessió per continuar",
+    "fullnameLabel": "Nom complet",
+    "fullnamePlaceholder": "Joan Pérez",
+    "emailLabel": "Correu electrònic",
+    "emailPlaceholder": "tu@email.com",
+    "passwordLabel": "Contrasenya",
+    "passwordPlaceholder": "***********",
+    "submit": "Inicia Sessió",
+    "toggle": "No tens compte? Registra't"
+  }
+}

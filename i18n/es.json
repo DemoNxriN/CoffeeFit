@@ -1,0 +1,106 @@
+{
+  "title": "CoffeeFit",
+  "header": {
+    "logo": "CoffeeFit",
+    "login": "Iniciar Sesión"
+  },
+  "nav": {
+    "home": "Inicio",
+    "products": "Menú",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto"
+  },
+  "lang": {
+    "es": "Español",
+    "ca": "Català"
+  },
+  "hero": {
+    "badge": "Auténtica Cocina Saludable",
+    "title": "Sabores que",
+    "titleAccent": "Cuentan Historias",
+    "description": "Descubre una experiencia gastronómica única donde cada plato es preparado con ingredientes frescos y recetas saludables.",
+    "btnMenu": "Ver Menú",
+    "btnReserve": "Reservar Mesa"
+  },
+  "features": {
+    "title": "¿Por Qué Elegirnos?",
+    "description": "Nos dedicamos a ofrecer una experiencia gastronómica inolvidable con atención al detalle en cada aspecto.",
+    "chef": {
+      "title": "Chef Profesional",
+      "description": "Nuestro chef cuenta con más de 20 años de experiencia en alta cocina."
+    },
+    "ingredients": {
+      "title": "Ingredientes Frescos",
+      "description": "Trabajamos con productores locales para garantizar la máxima calidad."
+    },
+    "speed": {
+      "title": "Servicio Rápido",
+      "description": "Atención eficiente sin comprometer la calidad de nuestros platos."
+    },
+    "healthy": {
+      "title": "Saludable",
+      "description": "Reconocidos por nuestra excelencia culinaria y servicio excepcional."
+    }
+  },
+  "menu": {
+    "title": "Nuestro Menú",
+    "description": "Descubre nuestras especialidades preparadas con pasión y los mejores ingredientes.",
+    "menu1": {
+      "title": "Paella Valenciana",
+      "description": "Arroz con mariscos frescos, pollo y azafrán"
+    },
+    "menu2": {
+      "title": "Solomillo al Vino Tinto",
+      "description": "Jugoso solomillo con salsa de vino y guarnición"
+    },
+    "menu3": {
+      "title": "Risotto de Setas",
+      "description": "Cremoso risotto con setas de temporada y parmesano"
+    },
+    "menu4": {
+      "title": "Tarta de Chocolate",
+      "description": "Deliciosa tarta con corazón fundente y helado"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Rellena el formulario o utiliza nuestra información de contacto",
+    "formTitle": "Envíanos tu mensaje",
+    "form": {
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Nombre",
+      "lastnameLabel": "Apellido",
+      "lastnamePlaceholder": "Apellido",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Correo electrónico",
+      "phoneLabel": "Teléfono",
+      "phonePlaceholder": "Teléfono",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Mensaje",
+      "submit": "Enviar"
+    },
+    "infoTitle": "Información de contacto",
+    "info": {
+      "email": "Correo:",
+      "phone": "Teléfono:",
+      "address": "Dirección:"
+    }
+  },
+  "user": {
+    "profile": "Mi Perfil",
+    "settings": "Configuración",
+    "logout": "Cerrar Sesión"
+  },
+  "modal": {
+    "title": "Bienvenido de nuevo",
+    "subtitle": "Inicia sesión para continuar",
+    "fullnameLabel": "Nombre completo",
+    "fullnamePlaceholder": "Juan Pérez",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "***********",
+    "submit": "Iniciar Sesión",
+    "toggle": "¿No tienes cuenta? Regístrate"
+  }
+}
