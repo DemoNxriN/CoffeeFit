@@ -1,4 +1,4 @@
-// Carga las traducciones desde un JSON
+// translations.js
 export async function loadTranslations(lang) {
   try {
     const res = await fetch(`/i18n/${lang}.json`);
@@ -11,19 +11,22 @@ export async function loadTranslations(lang) {
   }
 }
 
-// Aplica traducciones a elementos con data-i18n
 export function applyTranslations(translations) {
+  function getValue(obj, path) {
+    return path.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : null), obj);
+  }
+
+  // Textos normales (permite HTML)
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n'); // ej: "nav.home"
-    const keys = key.split('.');
-    let text = translations;
+    const key = el.getAttribute('data-i18n');
+    const value = getValue(translations, key);
+    if (value) el.innerHTML = value;
+  });
 
-    for (const k of keys) {
-      if (text && typeof text === 'object') {
-        text = text[k];
-      }
-    }
-
-    if (typeof text === 'string') el.textContent = text;
+  // Placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const value = getValue(translations, key);
+    if (value) el.setAttribute('placeholder', value);
   });
 }
