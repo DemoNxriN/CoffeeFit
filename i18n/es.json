@@ -60,7 +60,8 @@
     "menu4": {
       "title": "Tarta de Chocolate",
       "description": "Deliciosa tarta con corazón fundente y helado"
-    }
+    },
+    "viewFull": "Ver Menú Completo"
   },
   "contact": {
     "title": "Contáctanos",
