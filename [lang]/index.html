@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoffeeFit</title>
-    <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/hero.css">
-    <link rel="stylesheet" href="./css/features.css">
-    <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/modal.css">
-    <link rel="stylesheet" href="./css/forms.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/features.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
@@ -25,13 +25,21 @@
                 </div>
 
                 <nav class="nav">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#menu">Menú</a>
-                    <a href="#sobre-nosotros">Sobre Nosotros</a>
-                    <a href="#contacto">Contacto</a>
+                    <a data-i18n="nav.home" href="#inicio">Inicio</a>
+                    <a data-i18n="nav.products" href="#menu">Menú</a>
+                    <a data-i18n="nav.about" href="#sobre-nosotros">Sobre Nosotros</a>
+                    <a data-i18n="nav.contact" href="#contacto">Contacto</a>
                 </nav>
 
                 <div class="header-actions">
+                    <div id="language-selector" class="language-selector">
+                        <button id="language-btn">Español ▼</button>
+                            <div id="language-menu" class="hidden">
+                                <a href="#" data-lang="es">Español</a>
+                                <a href="#" data-lang="ca">Català</a>
+                            </div>
+                        </div>
+
                     <button id="theme-toggle" class="btn-icon" aria-label="Cambiar tema">
                         <svg id="theme-icon-moon" class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
