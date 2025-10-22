@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/forms.css">
-    <!-- <link rel="stylesheet" href="./css/responsive.css"> -->
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/contactos.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
@@ -22,17 +22,11 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
+
                 <div class="logo">
                     <div class="logo-icon"></div>
                     <span class="logo-text" data-i18n="header.logo">CoffeeFit</span>
                 </div>
-
-                <nav class="nav">
-                    <a data-i18n="nav.home" href="#inicio">Inicio</a>
-                    <a data-i18n="nav.products" href="#menu">Menú</a>
-                    <a data-i18n="nav.about" href="#sobre-nosotros">Sobre Nosotros</a>
-                    <a data-i18n="nav.contact" href="#contacto">Contacto</a>
-                </nav>
 
                 <div class="header-actions">
                     <div class="language-selector">
@@ -250,7 +244,8 @@
                     </div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title" data-i18n="menu.menu1.title">Paella Valenciana</h3>
-                        <p class="menu-card-description" data-i18n="menu.menu1.description">Arroz con mariscos frescos, pollo y azafrán</p>
+                        <p class="menu-card-description" data-i18n="menu.menu1.description">Arroz con mariscos frescos,
+                            pollo y azafrán</p>
                     </div>
                 </div>
 
@@ -261,7 +256,8 @@
                     </div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title" data-i18n="menu.menu2.title">Solomillo al Vino Tinto</h3>
-                        <p class="menu-card-description" data-i18n="menu.menu2.description">Jugoso solomillo con salsa de vino y guarnición</p>
+                        <p class="menu-card-description" data-i18n="menu.menu2.description">Jugoso solomillo con salsa
+                            de vino y guarnición</p>
                     </div>
                 </div>
 
@@ -272,7 +268,8 @@
                     </div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title" data-i18n="menu.menu3.title">Risotto de Setas</h3>
-                        <p class="menu-card-description" data-i18n="menu.menu3.description">Cremoso risotto con setas de temporada y parmesano</p>
+                        <p class="menu-card-description" data-i18n="menu.menu3.description">Cremoso risotto con setas de
+                            temporada y parmesano</p>
                     </div>
                 </div>
 
@@ -283,7 +280,8 @@
                     </div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title" data-i18n="menu.menu4.title">Tarta de Chocolate</h3>
-                        <p class="menu-card-description" data-i18n="menu.menu4.description">Deliciosa tarta con corazón fundente y helado</p>
+                        <p class="menu-card-description" data-i18n="menu.menu4.description">Deliciosa tarta con corazón
+                            fundente y helado</p>
                     </div>
                 </div>
             </div>
@@ -341,17 +339,60 @@
                     <button type="submit" data-i18n="contact.form.submit">Enviar</button>
                 </form>
 
-                <div class="contact-details">
-                    <h3 class="section-subtitle" data-i18n="contact.infoTitle">Información de contacto</h3>
-                    <ul>
-                        <li><strong data-i18n="contact.info.email">Correo:</strong> contacto@ejemplo.com</li>
-                        <li><strong data-i18n="contact.info.phone">Teléfono:</strong> +34 123 456 789</li>
-                        <li><strong data-i18n="contact.info.address">Dirección:</strong> Calle Ejemplo, 123, Ciudad</li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-column">
+                <h4 class="footer-title" data-i18n="footer.follow">Síguenos</h4>
+                <p data-i18n="footer.followText">Conéctate con nosotros en redes sociales</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="icon-facebook"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M22.675 0H1.325A1.326 1.326 0 0 0 0 1.325v21.351C0 23.404.596 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.586l-.467 3.622h-3.119V24h6.116A1.326 1.326 0 0 0 24 22.676V1.325A1.326 1.326 0 0 0 22.675 0z"/>
+    </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram"><i class="icon-instagram"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.343 3.608 1.317.975.975 1.256 2.242 1.317 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.061 1.366-.342 2.633-1.317 3.608-.975.975-2.242 1.256-3.608 1.317-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.061-2.633-.342-3.608-1.317-.975-.975-1.256-2.242-1.317-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.061-1.366.342-2.633 1.317-3.608C4.525 2.576 5.792 2.295 7.158 2.234 8.424 2.175 8.804 2.163 12 2.163zm0 1.685c-3.155 0-3.517.012-4.746.069-1.02.047-1.577.217-1.946.386-.49.213-.84.47-1.21.84-.37.37-.627.72-.84 1.21-.169.369-.339.926-.386 1.946-.057 1.229-.069 1.591-.069 4.746s.012 3.517.069 4.746c.047 1.02.217 1.577.386 1.946.213.49.47.84.84 1.21.37.37.72.627 1.21.84.369.169.926.339 1.946.386 1.229.057 1.591.069 4.746.069s3.517-.012 4.746-.069c1.02-.047 1.577-.217 1.946-.386.49-.213.84-.47 1.21-.84.37-.37.627-.72.84-1.21.169-.369.339-.926.386-1.946.057-1.229.069-1.591.069-4.746s-.012-3.517-.069-4.746c-.047-1.02-.217-1.577-.386-1.946a3.634 3.634 0 0 0-.84-1.21 3.634 3.634 0 0 0-1.21-.84c-.369-.169-.926-.339-1.946-.386-1.229-.057-1.591-.069-4.746-.069zm0 3.905a5.252 5.252 0 1 1 0 10.504 5.252 5.252 0 0 1 0-10.504zm0 8.667a3.415 3.415 0 1 0 0-6.83 3.415 3.415 0 0 0 0 6.83zm6.406-9.845a1.221 1.221 0 1 1 0-2.442 1.221 1.221 0 0 1 0 2.442z"/>
+    </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter"><i class="icon-twitter"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.73 1.04A4.28 4.28 0 0 0 16.11 4a4.28 4.28 0 0 0-4.17 5.25A12.14 12.14 0 0 1 3.15 4.6a4.28 4.28 0 0 0 1.32 5.7 4.24 4.24 0 0 1-1.94-.54v.05a4.28 4.28 0 0 0 3.43 4.19 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.97A8.6 8.6 0 0 1 2 19.54a12.14 12.14 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.67 8.67 0 0 0 22.46 6z"/>
+    </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-legal">
+                <h4 class="footer-title" data-i18n="footer.legalTitle">Legal</h4>
+                <ul>
+                    <li><a href="#" class="footer-link" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                    <li><a href="#" class="footer-link" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                    <li><a href="#" class="footer-link" data-i18n="footer.cookies">Política de Cookies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-details">
+                <h4 class="footer-title" data-i18n="contact.infoTitle">Información de contacto</h4>
+                <ul>
+                    <li><strong data-i18n="contact.info.email">Correo:</strong> contacto@ejemplo.com</li>
+                    <li><strong data-i18n="contact.info.phone">Teléfono:</strong> +34 123 456 789</li>
+                    <li><strong data-i18n="contact.info.address">Dirección:</strong> Calle Ejemplo, 123, Ciudad</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 CoffeeFit. Todos los derechos reservados.
+        </div>
+    </footer>
 
     <div id="auth-modal" class="modal hidden">
         <div class="modal-overlay"></div>
