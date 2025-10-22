@@ -103,5 +103,14 @@
     "passwordPlaceholder": "***********",
     "submit": "Inicia Sessió",
     "toggle": "No tens compte? Registra't"
+  },
+  "footer": {
+  "follow": "Segueix-nos",
+  "followText": "Connecta't amb nosaltres a les xarxes socials",
+  "legalTitle": "Legal",
+  "privacy": "Política de Privacitat",
+  "terms": "Termes i Condicions",
+  "cookies": "Política de Cookies",
+  "copyright": "© 2025 CoffeeFit. Tots els drets reservats."
   }
 }
