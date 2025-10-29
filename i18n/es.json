@@ -60,7 +60,8 @@
     "menu4": {
       "title": "Tarta de Chocolate",
       "description": "Deliciosa tarta con corazón fundente y helado"
-    }
+    },
+    "viewFull": "Ver Menú Completo"
   },
   "contact": {
     "title": "Contáctanos",
@@ -102,5 +103,15 @@
     "passwordPlaceholder": "***********",
     "submit": "Iniciar Sesión",
     "toggle": "¿No tienes cuenta? Regístrate"
+  },
+  "footer": {
+  "follow": "Síguenos",
+  "followText": "Conéctate con nosotros en redes sociales",
+  "legalTitle": "Legal",
+  "privacy": "Política de Privacidad",
+  "terms": "Términos y Condiciones",
+  "cookies": "Política de Cookies",
+  "copyright": "© 2025 CoffeeFit. Todos los derechos reservados."
   }
+
 }

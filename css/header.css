@@ -28,9 +28,8 @@
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(to bottom right, var(--color-primary), #dc2626);
+    width: 70px;
+    height: 50px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -45,22 +44,6 @@
     font-weight: bold;
     color: var(--color-text);
 }
-
-.nav {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav a {
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav a:hover {
-    color: var(--color-primary);
-}
-
 .header-actions {
     display: flex;
     align-items: center;
@@ -165,4 +148,62 @@
     height: 1px;
     background-color: var(--color-border);
     margin: 0.5rem 0;
+}
+
+/* === Language Selector === */
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+}
+
+.language-selector select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--main-color, #ffffff);
+  color: var(--main-blue, rgb(0, 51, 102));
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Flecha personalizada */
+.language-selector::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6rem;
+  color: var(--main-blue, rgb(0, 51, 102));
+  pointer-events: none;
+}
+
+.language-selector select:hover {
+  background-color: var(--main-gray, rgb(245, 245, 220));
+  transform: translateY(-2px);
+}
+
+/* === Modo oscuro === */
+[data-theme="dark"] .language-selector select {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .language-selector::after {
+  color: #fff;
+}
+
+[data-theme="dark"] .language-selector select:hover {
+  background-color: #333;
 }
