@@ -46,20 +46,20 @@
     "title": "Nuestro Menú",
     "description": "Descubre nuestras especialidades preparadas con pasión y los mejores ingredientes.",
     "menu1": {
-      "title": "Paella Valenciana",
-      "description": "Arroz con mariscos frescos, pollo y azafrán"
+      "title": "Bowl de Pollo con Quinoa",
+      "description": "Pollo a la plancha con quinoa y verduras frescas, un plato equilibrado, alto en proteínas y perfecto para recuperar energía después de entrenar."
     },
     "menu2": {
-      "title": "Solomillo al Vino Tinto",
-      "description": "Jugoso solomillo con salsa de vino y guarnición"
+      "title": "Tostadas integrales con aguacate y huevo",
+      "description": "Pan integral crujiente con aguacate y huevo, una combinación saciante de grasas saludables y proteínas de calidad."
     },
     "menu3": {
-      "title": "Risotto de Setas",
-      "description": "Cremoso risotto con setas de temporada y parmesano"
+      "title": "Salmón a la plancha con arroz integral",
+      "description": "Salmón a la plancha acompañado de arroz integral y verduras, rico en omega-3 y pensado para una alimentación saludable y completa."
     },
     "menu4": {
-      "title": "Tarta de Chocolate",
-      "description": "Deliciosa tarta con corazón fundente y helado"
+      "title": "Ensalada de garbanzos",
+      "description": "Ensalada de garbanzos con espinacas y queso feta, fresca, nutritiva y rica en proteína vegetal."
     },
     "viewFull": "Ver Menú Completo"
   },

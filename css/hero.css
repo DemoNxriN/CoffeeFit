@@ -57,6 +57,9 @@
     color: var(--color-text-secondary);
 }
 
+a {
+text-decoration: none;
+}
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;

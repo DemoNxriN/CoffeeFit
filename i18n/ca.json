@@ -46,20 +46,20 @@
     "title": "El Nostre Menú",
     "description": "Descobreix les nostres especialitats preparades amb passió i els millors ingredients.",
     "menu1": {
-      "title": "Paella Valenciana",
-      "description": "Arròs amb marisc fresc, pollastre i safrà"
+      "title": "Bowl de Pollastre amb Quinoa",
+      "description": "Pollastre a la planxa amb quinoa i verdures fresques, un plat equilibrat, ric en proteïnes i ideal per recuperar energia després d’entrenar."
     },
     "menu2": {
-      "title": "Filet de Vedella al Vi Negre",
-      "description": "Sucós filet amb salsa de vi i guarnició"
+      "title": "Torrades Integrals amb Alvocat i Ou",
+      "description": "Pa integral cruixent amb alvocat i ou, una combinació saciant de greixos saludables i proteïnes de qualitat."
     },
     "menu3": {
-      "title": "Risotto de Bolets",
-      "description": "Cremós risotto amb bolets de temporada i parmesà"
+      "title": "Salmó a la Planxa amb Arròs Integral",
+      "description": "Salmó a la planxa amb arròs integral i verdures, ric en omega-3 i pensat per a una alimentació saludable i completa."
     },
     "menu4": {
-      "title": "Pastís de Xocolata",
-      "description": "Deliciós pastís amb cor fundent i gelat"
+      "title": "Amanida de Cigrons",
+      "description": "Amanida de cigrons amb espinacs i formatge feta, fresca, nutritiva i rica en proteïna vegetal."
     },
     "viewFull": "Veure Menú Complet"
   },
